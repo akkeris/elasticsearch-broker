@@ -56,9 +56,9 @@ func IsAvailable(status string) bool {
 }
 
 func InProgress(status string) bool {
-	return status == "upgrading" || status == "creating" || status == "processing"
+	return status == "upgrading" || status == "creating"
 }
 
 func CanGetBindings(status string) bool {
-	return status != "deleted" && status != "creating" && status != "processing"
+	return status != "deleted" && status != "creating"
 }

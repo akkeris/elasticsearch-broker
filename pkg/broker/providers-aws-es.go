@@ -21,7 +21,7 @@ type AWSInstanceESProvider struct {
 }
 
 func IsReady(status *elasticsearchservice.ElasticsearchDomainStatus) bool {
-	return *status.Created == true && *status.Deleted == false && *status.Processing == false && *status.UpgradeProcessing == false
+	return *status.Created == true && *status.Deleted == false && *status.UpgradeProcessing == false
 }
 
 func GetStatus(status *elasticsearchservice.ElasticsearchDomainStatus) string {
